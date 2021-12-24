@@ -121,7 +121,7 @@ class PovertyMapDataset(SustainBenchDataset):
     _dataset_name = 'poverty'
     _versions_dict = {
         '1.0': {
-            'download_urls': {
+            'download_urls': [
                 {'url': 'dhs_AL_DR.tar.gz',
                  'size': 16_472_693_417},
                 {'url': 'dhs_EG_HT.tar.gz',
@@ -136,7 +136,7 @@ class PovertyMapDataset(SustainBenchDataset):
                  'size':  9_024_655_370},
                 {'url': 'dhs_final_labels.csv',
                  'size':     19_356_345}
-            }
+            ]
         }
     }
 

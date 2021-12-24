@@ -14,6 +14,29 @@ class SustainBenchDataset:
     - metadata is a vector of relevant information, e.g., domain.
       For convenience, metadata also contains y.
     """
+    
+    _dataset_name = 'poverty'
+    _versions_dict = {
+        '1.0': {
+            'download_urls': [
+                {'url': 'dhs_AL_DR.tar.gz',
+                 'size': 16_472_693_417},
+                {'url': 'dhs_EG_HT.tar.gz',
+                 'size': 13_579_206_686},
+                {'url': 'dhs_IA_IA.tar.gz',
+                 'size': 24_046_259_399},
+                {'url': 'dhs_ID_MZ.tar.gz',
+                 'size': 18_386_761_224},
+                {'url': 'dhs_NG_SZ.tar.gz',
+                 'size': 18_911_963_362},
+                {'url': 'dhs_TD_ZW.tar.gz',
+                 'size':  9_024_655_370},
+                {'url': 'dhs_final_labels.csv',
+                 'size':     19_356_345}
+            ]
+        }
+    }
+    
     DEFAULT_SPLITS = {'train': 0, 'val': 1, 'test': 2}
     DEFAULT_SPLIT_NAMES = {'train': 'Train', 'val': 'Validation', 'test': 'Test'}
 
