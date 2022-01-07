@@ -1,5 +1,6 @@
 import os
 import time
+from numpy.core.fromnumeric import compress
 
 import torch
 import numpy as np
@@ -321,8 +322,9 @@ class SustainBenchDataset:
         if self.version not in self.versions_dict:
             raise ValueError(f'Version {self.version} not supported. Must be in {self.versions_dict.keys()}.')
 
-        download_url = self.versions_dict[self.version]['download_url']
-        compressed_size = self.versions_dict[self.version]['compressed_size']
+        download_url = self.versions_dict[self.version]['download_urls']
+        # compressed_size = self.versions_dict[self.version]['compressed_size']
+        compressed_size = None
 
         os.makedirs(root_dir, exist_ok=True)
 
